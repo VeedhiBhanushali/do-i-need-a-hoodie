@@ -82,6 +82,15 @@ pull requests so the data, analysis, interface, and documentation stay consisten
 - pandas
 - Matplotlib
 
+## Development Check
+
+The current foundation milestone uses only the Python standard library. Run its
+tests from the repository root with:
+
+```bash
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
+
 ## Project Status
 
 The proposal and team plan are complete. The first implementation milestone is in

@@ -40,8 +40,8 @@ say who completed and reviewed the work.
 ### Milestone 1 — foundation
 
 - [x] Agree on the project and partner roles.
-- [ ] Add the Python package structure and forecast data model.
-- [ ] Add initial validation tests.
+- [x] Add the Python package structure and forecast data model.
+- [x] Add initial validation tests.
 
 ### Milestone 2 — data and analysis
 
