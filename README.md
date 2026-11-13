@@ -2,9 +2,8 @@
 
 ## Authors
 
-Veedhi Bhanushali
-
-Partner: not assigned yet. I prepared this proposal individually. The team arrangement and division of work still need to be confirmed with the instructor.
+- Veedhi Bhanushali (`@VeedhiBhanushali`)
+- Joseph "Joey" Lee (`@JLTheEarthworm`)
 
 ## Project Description
 
@@ -36,9 +35,7 @@ Planned interactive widgets:
 
 The app will show a message for missing choices, invalid time ranges, unavailable forecasts, or failed downloads. Opening an old forecast will show its download time so users know it may be outdated.
 
-### Data Collection and Storage Plan - Author #1 Role
-
-Prepared by Veedhi Bhanushali while the partner assignment is pending.
+### Data Collection and Storage Plan - Veedhi's Role
 
 I will use `requests` to download hourly temperature, apparent temperature (feels-like temperature), precipitation probability, and wind speed from the Open-Meteo Forecast API. Requests will use the city's coordinates and local time zone. The program will check that the response contains the requested hours and variables before using it.
 
@@ -48,11 +45,9 @@ Data source: https://open-meteo.com/en/docs
 
 The app and README will credit Open-Meteo and its required data providers. Forecasts will be labeled as predictions. Missing values will not be replaced with zero, and an incomplete feels-like series will not produce a confident clothing recommendation.
 
-### Data Analysis and Visualization Plan - Author #2 Role
+### Data Analysis and Visualization Plan - Joey's Role
 
-Proposed by Veedhi Bhanushali. A second author has not been assigned, so this section is not being claimed as another person's contribution.
-
-I will use pandas to select the hours during the outing and calculate the lowest and average feels-like temperatures, the change from the first hour to the last hour, the highest wind speed, and the highest hourly precipitation probability. The highest hourly probability will be labeled clearly; it is not the probability of precipitation over the entire outing.
+Joey will use pandas to select the hours during the outing and calculate the lowest and average feels-like temperatures, the change from the first hour to the last hour, the highest wind speed, and the highest hourly precipitation probability. The highest hourly probability will be labeled clearly; it is not the probability of precipitation over the entire outing.
 
 The first recommendation rules will use the lowest feels-like temperature in the outing:
 
@@ -62,11 +57,11 @@ The first recommendation rules will use the lowest feels-like temperature in the
 
 For someone who gets cold easily, the temperature cutoffs will increase by 2 degrees Celsius. For someone who usually feels warm, they will decrease by 2 degrees Celsius. A high precipitation probability will add a separate suggestion to bring an umbrella or a rain-resistant layer. Wind will appear in the explanation, but I will not apply another wind-chill adjustment because apparent temperature already accounts for wind and other weather conditions. These are adjustable comfort rules rather than a guarantee of what everyone should wear.
 
-Matplotlib will show actual and feels-like temperature across the selected hours. The graph will include the city and outing date, labeled axes with units, a legend, and a horizontal line for the user's hoodie cutoff. Users will be able to save the graph as a PNG. Changing the displayed temperature units will convert the values and cutoff together without changing the recommendation.
+Joey will use Matplotlib to show actual and feels-like temperature across the selected hours. The graph will include the city and outing date, labeled axes with units, a legend, and a horizontal line for the user's hoodie cutoff. Users will be able to save the graph as a PNG. Changing the displayed temperature units will convert the values and cutoff together without changing the recommendation.
 
 ### Planned Steps
 
-1. Confirm the partner arrangement with the instructor.
+1. Establish the shared project structure and contribution workflow.
 2. Download a sample forecast and organize the saved files.
 3. Build the main Tkinter window.
 4. Write the weather summaries and recommendation rules.
@@ -74,6 +69,10 @@ Matplotlib will show actual and feels-like temperature across the selected hours
 6. Add file loading, saving, and graph export.
 7. Test different cold tolerances, dates, units, missing values, and failed downloads.
 8. Finish the README instructions and prepare a short demonstration.
+
+The current division of work and milestone checklist are documented in
+[`docs/team_plan.md`](docs/team_plan.md). Both partners will review each other's
+pull requests so the data, analysis, interface, and documentation stay consistent.
 
 ## Planned Tools
 
@@ -85,7 +84,10 @@ Matplotlib will show actual and feels-like temperature across the selected hours
 
 ## Project Status
 
-This repository currently contains the proposal. The app has not been implemented yet. Installation and run instructions will be added when there is a working version.
+The proposal and team plan are complete. The first implementation milestone is in
+progress: project structure, validated forecast records, and initial automated
+tests. Installation and run instructions will be added with the first runnable
+version.
 
 ## Possible Future Improvements
 
