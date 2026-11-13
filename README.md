@@ -70,9 +70,8 @@ Joey will use Matplotlib to show actual and feels-like temperature across the se
 7. Test different cold tolerances, dates, units, missing values, and failed downloads.
 8. Finish the README instructions and prepare a short demonstration.
 
-The current division of work and milestone checklist are documented in
-[`docs/team_plan.md`](docs/team_plan.md). Both partners will review each other's
-pull requests so the data, analysis, interface, and documentation stay consistent.
+Our current work split and next steps are in
+[`docs/team_plan.md`](docs/team_plan.md).
 
 ## Planned Tools
 
@@ -84,10 +83,9 @@ pull requests so the data, analysis, interface, and documentation stay consisten
 
 ## Project Status
 
-The proposal and team plan are complete. The first implementation milestone is in
-progress: project structure, validated forecast records, and initial automated
-tests. Installation and run instructions will be added with the first runnable
-version.
+The team is confirmed and we are starting the first working version. The first
+step is reading hourly weather data from Open-Meteo and turning it into a format
+the rest of the app can use.
 
 ## Possible Future Improvements
 
