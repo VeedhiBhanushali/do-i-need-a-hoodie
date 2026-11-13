@@ -81,6 +81,15 @@ Our current work split and next steps are in
 - pandas
 - Matplotlib
 
+## Current Code
+
+`weather_data.py` has the first helper for checking the hourly fields returned
+by Open-Meteo and turning them into rows. Run the small test file with:
+
+```bash
+python3 -m unittest -v
+```
+
 ## Project Status
 
 The team is confirmed and we are starting the first working version. The first
