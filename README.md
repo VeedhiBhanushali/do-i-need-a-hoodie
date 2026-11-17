@@ -47,17 +47,21 @@ The app and README will credit Open-Meteo and its required data providers. Forec
 
 ### Data Analysis and Visualization Plan - Joey's Role
 
-Joey will use pandas to select the hours during the outing and calculate the lowest and average feels-like temperatures, the change from the first hour to the last hour, the highest wind speed, and the highest hourly precipitation probability. The highest hourly probability will be labeled clearly; it is not the probability of precipitation over the entire outing.
+### Data Analysis and Visualization Plan - Joey's Role
 
-The first recommendation rules will use the lowest feels-like temperature in the outing:
+For my part of the project, I'll be working on analyzing the weather data and displaying the results to the user. I'll use pandas to look at the weather conditions during the selected outing hours and calculate the lowest and average feels-like temperatures, the temperature change throughout the outing, the highest wind speed, and the highest hourly chance of precipitation.
 
-- Below 10 degrees Celsius: bring a warmer jacket.
-- From 10 to below 18 degrees Celsius: bring a hoodie.
-- At least 18 degrees Celsius: an extra layer may not be needed.
+I'll also be responsible for creating the clothing recommendation system. The recommendations will mainly depend on the lowest feels-like temperature during the outing:
 
-For someone who gets cold easily, the temperature cutoffs will increase by 2 degrees Celsius. For someone who usually feels warm, they will decrease by 2 degrees Celsius. A high precipitation probability will add a separate suggestion to bring an umbrella or a rain-resistant layer. Wind will appear in the explanation, but I will not apply another wind-chill adjustment because apparent temperature already accounts for wind and other weather conditions. These are adjustable comfort rules rather than a guarantee of what everyone should wear.
+- Below 10°C: Recommend bringing a warmer jacket.
+- Between 10°C and 18°C (not including 18°C): Recommend bringing a hoodie.
+- 18°C or higher: An extra layer might not be necessary.
 
-Joey will use Matplotlib to show actual and feels-like temperature across the selected hours. The graph will include the city and outing date, labeled axes with units, a legend, and a horizontal line for the user's hoodie cutoff. Users will be able to save the graph as a PNG. Changing the displayed temperature units will convert the values and cutoff together without changing the recommendation.
+I'll also account for the user's cold tolerance. If someone gets cold easily, I'll increase the temperature thresholds by 2°C. If someone usually feels warm, I'll decrease them by 2°C. I'll include an additional suggestion to bring an umbrella or rain-resistant clothing if there's a high chance of precipitation.
+
+For the visualization part, I plan to use Matplotlib to create a graph showing the actual temperature and feels-like temperature throughout the outing. The graph will include the selected city, date, labeled axes, a legend, and a reference line showing the temperature threshold for recommending a hoodie.
+
+I'll also make it possible for users to switch between Celsius and Fahrenheit and save the graph as a PNG image. The temperature values and thresholds will change based on the selected unit, but the clothing recommendation itself will stay the same.
 
 ### Planned Steps
 
